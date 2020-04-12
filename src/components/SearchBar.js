@@ -1,12 +1,23 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
+    state = { term: '' };
+
+    onFormSubmit = event => {
+        event.preventDefault();
+        console.log(this.state.term);
+    };
+
     render() {
         return (
             <div className="searcharea">
-                <form className="searchForm" onSubmit="">
-                    <label>Enter a book to search</label>
-                    <input type="text" value="" onChange="" />
+                <form onSubmit={this.onFormSubmit} className="searchForm">
+                    <label>Book search</label>
+                    <input
+                        type="text"
+                        value={this.state.term}
+                        onChange={e => this.setState({ term: e.target.value })}
+                    />
                 </form>
             </div>
         )
@@ -14,3 +25,6 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+
+//input(onChange) -> onInputChange(e)
+//84
