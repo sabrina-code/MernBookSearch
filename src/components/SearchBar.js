@@ -28,6 +28,3 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
-
-//input(onChange) -> onInputChange(e)
-//84
