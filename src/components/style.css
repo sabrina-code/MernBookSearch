@@ -1,0 +1,10 @@
+.searcharea{
+    margin-top: 60px;
+}
+.searcharea label{
+    margin: 0px 12px;
+}
+.searcharea input{
+    width: 60%;
+    min-width: 300px;
+}
