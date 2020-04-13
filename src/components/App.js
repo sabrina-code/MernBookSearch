@@ -1,6 +1,7 @@
 import React from 'react';
 import book from '../api/book';
 import SearchBar from './SearchBar';
+import BookList from './BookList'
 
 const KEY = 'AIzaSyBYlDujBqXB32sgbb43_HCVYNHm7SC5qjk';
 
@@ -12,16 +13,17 @@ class App extends React.Component {
             params: {
                 q: term,
                 key: KEY,
-                maxResults: 20
+                maxResults: 10
             }
         });
-        this.setState({ books: response.data.results });
+        this.setState({ books: response.data.items });
     }
 
     render() {
         return (
             <div className="" >
                 <SearchBar onSubmit={this.onSearchSubmit} />
+                <BookList books={this.state.books} />
             </div>
         );
     }
