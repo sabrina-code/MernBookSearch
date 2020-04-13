@@ -1,3 +1,4 @@
+/* ---- SearchBar.js -------*/
 .searcharea{
     margin-top: 60px;
 }
@@ -8,3 +9,13 @@
     width: 60%;
     min-width: 300px;
 }
+/* ---- BookList.js -------*/
+.booklist{
+    text-align: center;
+}
+.booklist img{
+    width: 180px;
+    height: 240px;
+    margin:20px;
+}
+
