@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import book from '../api/book';
 import SearchBar from './SearchBar';
 
 const KEY = 'AIzaSyBYlDujBqXB32sgbb43_HCVYNHm7SC5qjk';
@@ -8,7 +8,7 @@ class App extends React.Component {
     state = { books: [] };
 
     onSearchSubmit = async term => {
-        const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
+        const response = await book.get('/volumes', {
             params: {
                 q: term,
                 key: KEY,
