@@ -5,7 +5,14 @@ const BookList = ({ books, onBookSelect }) => {
     const RenderedBooks = books.map(book => {
         return <BookItem onBookSelect={onBookSelect} key={book.id} book={book} />
     });
-    return <div className="thumblist col-7">{RenderedBooks}</div>
+    return (
+        <div className="table col-7">
+            <ul className="horizontal-list ">
+                <li className="table">{RenderedBooks}</li>
+            </ul>
+        </div>
+
+    )
 
 };
 

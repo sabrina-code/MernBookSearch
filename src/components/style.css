@@ -1,9 +1,18 @@
 /******* SearchBar.js *******/
 form.searchForm {
-    margin: 120px 0 60px;
+    padding: 120px 0 60px;
 }
 .searcharea label{
     margin: 0px 12px;
+}
+input {
+    color: #fffed2;
+    border: 1px solid #8e8e8e;
+}
+.input:focus {
+    outline: none !important;
+    border: 1px solid #363636 !important;
+    box-shadow: 0 0 10px ;
 }
 .searcharea input{
     line-height: 1.3;
@@ -11,6 +20,17 @@ form.searchForm {
     min-width: 210px;
     padding: 5px 15px;
     width:80%;
+    background: rgba(138, 137, 135, 0.9);
+}
+.searcharea button{
+    border: 2px solid #8e8e8e;
+}
+.searcharea button:hover,
+.searcharea button:active:hover
+{
+    border: 2px solid #8e8e8e;
+    background: #333;
+    color: white;
 }
 label {
     display: block;
@@ -24,20 +44,26 @@ form button{
 }
 
 /******* BookList.js *******/
-.thumblist {
-    display: block;
+ul.horizontal-list {
     height: 760px;
-    float: left;
+    list-style: none;
     overflow: scroll;
-    background: #dddede;
-    border: 2px solid #c1c2c5;
-    margin-left: 20px;
+    background: rgba(221, 222, 222,.6);
+    background: rgba(2, 49, 49, 0.6);
+    border: 2px solid #313b5a;
 }
+ul.horizontal-list li{
+    display: inline;
+}
+.table {
+	display: table; 
+    margin: 0 auto;
+    float: left;
+}
+
 /******* BookItem.js *******/
 img.thumb {
-    /* width: 180px; */
     height: 240px !important;
-    /* margin:10px; */
 }
 .card {
     width: 200px;
@@ -45,7 +71,8 @@ img.thumb {
     float: left;
     display: block;
     margin:5px;
-    border: 1px solid rgb(180, 180, 180);    
+    border: 1px solid rgb(180, 180, 180); 
+       
 }
 .card-title {
     margin: .75rem;
@@ -60,12 +87,14 @@ p.mt-auto {
     padding:0 10px 0 10px;
     color: grey;
 }
+
 /********* BookDetail *********/
 .bookdetail{
     padding: 15px;
     margin:0 15px 30px 30px;
     display: inline-block;
-    border: 1px solid rgb(180, 180, 180); 
+    background: rgba(255,255,255,.9);    
+    border: 1px solid rgb(127, 127, 127); 
 }
 .bookdetail h4{
     margin-top: 20px;
@@ -75,4 +104,10 @@ height: 600px;
 }
 .list.col-7 {
     display: inline-block;
+}
+
+/******* App *******/
+body{
+    background-image: url("../images/bgrnd.jpg");
+    background-position: cover;
 }

@@ -11,7 +11,7 @@ class App extends React.Component {
     state = { books: [], selectedBook: null };
 
     componentDidMount() {
-        this.onSearchSubmit('flowers');
+        this.onSearchSubmit('');
     }
 
     onSearchSubmit = async term => {
@@ -32,7 +32,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="bg">
                 <SearchBar onSubmit={this.onSearchSubmit} />
                 <BookDetail book={this.state.selectedBook} />
                 <BookList onBookSelect={this.onBookSelect} books={this.state.books} />

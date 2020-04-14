@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookDetail = ({ book }) => {
     if (!book) {
-        return <div>Select a book...</div>
+        return <div></div>
     }
     return (
         <div className="bookdetail col-4">
