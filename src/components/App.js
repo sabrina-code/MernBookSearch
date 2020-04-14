@@ -10,9 +10,9 @@ const KEY = 'AIzaSyBYlDujBqXB32sgbb43_HCVYNHm7SC5qjk';
 class App extends React.Component {
     state = { books: [], selectedBook: null };
 
-    componentDidMount() {
-        this.onSearchSubmit('');
-    }
+    // componentDidMount() {
+    //     this.onSearchSubmit('flower');
+    // }
 
     onSearchSubmit = async term => {
         const response = await book.get('/volumes', {

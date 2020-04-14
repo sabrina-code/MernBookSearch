@@ -75,11 +75,17 @@ img.thumb {
        
 }
 .card-title {
-    margin: .75rem;
+    margin: .2rem .6rem 0;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 p.card-text{
     color: grey;
     padding:10px;
+    height: 40px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 p.mt-auto {
     font-size: 14px;
@@ -93,6 +99,8 @@ p.mt-auto {
     padding: 15px;
     margin:0 15px 30px 30px;
     display: inline-block;
+    height: 760px;
+    overflow: scroll;
     background: rgba(255,255,255,.9);    
     border: 1px solid rgb(127, 127, 127); 
 }
