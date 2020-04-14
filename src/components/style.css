@@ -109,5 +109,5 @@ height: 600px;
 /******* App *******/
 body{
     background-image: url("../images/bgrnd.jpg");
-    background-position: cover;
+    background-size: auto;
 }
