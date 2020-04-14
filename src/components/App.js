@@ -2,12 +2,13 @@ import React from 'react';
 import book from '../api/book';
 import SearchBar from './SearchBar';
 import BookList from './BookList'
+import BookDetail from './BookDetail'
 
 
 const KEY = 'AIzaSyBYlDujBqXB32sgbb43_HCVYNHm7SC5qjk';
 
 class App extends React.Component {
-    state = { books: [] };
+    state = { books: [], selectedBook: null };
 
     componentDidMount() {
         this.onSearchSubmit('flowers');
@@ -24,11 +25,17 @@ class App extends React.Component {
         this.setState({ books: response.data.items });
     }
 
+    onBookSelect = book => {
+        // console.log('From the App', book);
+        this.setState({ selectedBook: book });
+    };
+
     render() {
         return (
             <div>
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                <BookList books={this.state.books} />
+                <BookDetail book={this.state.selectedBook} />
+                <BookList onBookSelect={this.onBookSelect} books={this.state.books} />
             </div>
         );
     }

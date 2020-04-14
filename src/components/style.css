@@ -1,4 +1,4 @@
-/* ---- SearchBar.js -------*/
+/******* SearchBar.js *******/
 form.searchForm {
     margin: 120px 0 60px;
 }
@@ -23,22 +23,25 @@ form button{
     width:20%;
 }
 
-/* ---- BookList.js -------*/
+/******* BookList.js *******/
 .thumblist {
-    text-align: center;
-    max-width:940px;
-    margin-left:auto;
-    margin-right: auto;
+    display: block;
+    height: 760px;
+    float: left;
+    overflow: scroll;
+    background: #dddede;
+    border: 2px solid #c1c2c5;
+    margin-left: 20px;
 }
-/* ---- BookItem.js -------*/
+/******* BookItem.js *******/
 img.thumb {
     /* width: 180px; */
-    height: 280px !important;
+    height: 240px !important;
     /* margin:10px; */
 }
-card {
-    width: 220px;
-    height: 500px;
+.card {
+    width: 200px;
+    height: 460px;
     float: left;
     display: block;
     margin:5px;
@@ -47,15 +50,29 @@ card {
 .card-title {
     margin: .75rem;
 }
-.card-text{
+p.card-text{
     color: grey;
+    padding:10px;
 }
 p.mt-auto {
     font-size: 14px;
+    text-align: center;
+    padding:0 10px 0 10px;
     color: grey;
 }
-/* h5, p{
-    padding: 5px 10px;
-    margin-bottom: 0;
-} */
-
+/********* BookDetail *********/
+.bookdetail{
+    padding: 15px;
+    margin:0 15px 30px 30px;
+    display: inline-block;
+    border: 1px solid rgb(180, 180, 180); 
+}
+.bookdetail h4{
+    margin-top: 20px;
+}
+.card-img-top {
+height: 600px;
+}
+.list.col-7 {
+    display: inline-block;
+}

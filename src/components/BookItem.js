@@ -1,24 +1,20 @@
 import React from 'react';
 
-class BookItem extends React.Component {
-    render() {
-        const { title, imageLinks, authors, publishedDate } = this.props.book.volumeInfo;
-        return (
-            <card className="d-flex flex-column ">
-                <img className="card-img-top thumb"
-                    alt={title}
-                    src={
-                        imageLinks === undefined
-                            ? ""
-                            : `${imageLinks.thumbnail}`
-                    }
-                />
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{authors}</p>
-                <p className="mt-auto">{publishedDate}</p>
-            </card >
-        );
-    }
-}
+const BookItem = ({ book, onBookSelect }) => {
+    return (
+        <div onClick={() => onBookSelect(book)} className="d-flex flex-column card">
+            <img className="thumb"
+                alt={book.title}
+                src={
+                    book.volumeInfo.imageLinks === undefined ? "" : `${book.volumeInfo.imageLinks.thumbnail}`
+                }
+            />
+            <h5 className="card-title">{book.volumeInfo.title}</h5>
+            <p className="card-text">{book.volumeInfo.authors}</p>
+            <p className="mt-auto">{book.volumeInfo.publishedDate}</p>
+        </div >
+    );
+};
+
 
 export default BookItem;
