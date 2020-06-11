@@ -6,7 +6,7 @@ const BookList = ({ books, onBookSelect }) => {
         return <BookItem onBookSelect={onBookSelect} key={book.id} book={book} />
     });
     return (
-        <div className="table col-7">
+        <div className="table col-md-7 col-sm-12">
             <ul className="horizontal-list ">
                 <li className="table">{RenderedBooks}</li>
             </ul>

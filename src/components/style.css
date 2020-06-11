@@ -1,12 +1,13 @@
 /******* SearchBar.js *******/
 form.searchForm {
-    padding: 120px 0 60px;
+    padding: 80px 0 20px;
+    text-align: center;
 }
 .searcharea label{
     margin: 0px 12px;
 }
 input {
-    color: #fffed2;
+    color: black;
     border: 1px solid #8e8e8e;
 }
 .input:focus {
@@ -19,18 +20,19 @@ input {
     font-size: 25px;
     min-width: 210px;
     padding: 5px 15px;
-    width:80%;
-    background: rgba(138, 137, 135, 0.9);
+    width:70%;
+    background: rgba(255, 255, 255, 0.8);
 }
 .searcharea button{
-    border: 1px solid #8e8e8e;
-    background: #333;
+    border: 2px solid black;
+    background: black;
     color: white;
+    transition: all ease .5s;
 }
 .searcharea button:hover,
-.searcharea button:active:hover
-{
-    background: black;
+.searcharea button:active:hover{
+    border: 2px solid #c3ab00;
+    background: #c3ab00;
     color: white;
 }
 label {
@@ -39,19 +41,18 @@ label {
 }
 form button{
     line-height: 1.3;
-    font-size: 25px;
+    font-size: 23px;
     padding: 5px 14px;
-    width:20%;
+    width:100px;
 }
 
 /******* BookList.js *******/
 ul.horizontal-list {
-    height: 760px;
+    height: 600px;
     list-style: none;
     overflow: scroll;
-    background: rgba(221, 222, 222,.6);
-    background: rgba(2, 49, 49, 0.6);
-    border: 2px solid #313b5a;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #b7c3ea;
 }
 ul.horizontal-list li{
     display: inline;
@@ -64,11 +65,11 @@ ul.horizontal-list li{
 
 /******* BookItem.js *******/
 img.thumb {
-    height: 240px !important;
+    height: 200px !important;
 }
 .card {
-    width: 200px;
-    height: 460px;
+    width: 160px;
+    height: 380px;
     float: left;
     display: block;
     margin:5px;
@@ -76,31 +77,35 @@ img.thumb {
        
 }
 .card-title {
+    font-size: 15px;
     margin: .2rem .6rem 0;
-    height: 100px;
+    height: 110px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 p.card-text{
-    color: grey;
-    padding:10px;
+    font-size: 14px;
+    line-height: 15px;
+    color:#4e4e4e;
+    padding:8px;
+    margin-bottom: 0 !important;
     height: 40px; 
     overflow: hidden;
     text-overflow: ellipsis; 
 }
 p.mt-auto {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 14px;
     text-align: center;
-    padding:0 10px 0 10px;
-    color: grey;
+    padding:0 8px 0 8px;
+    margin:15px auto;
+    color:#4e4e4e;
 }
-
 /********* BookDetail *********/
 .bookdetail{
     padding: 15px;
-    margin:0 15px 30px 30px;
     display: inline-block;
-    height: 760px;
+    height: 600px;
     overflow: scroll;
     background: rgba(255,255,255,.9);    
     border: 1px solid rgb(127, 127, 127); 
@@ -109,7 +114,8 @@ p.mt-auto {
     margin-top: 20px;
 }
 .card-img-top {
-height: 600px;
+    width:300px;
+    height: 400px;
 }
 .list.col-7 {
     display: inline-block;
@@ -118,5 +124,33 @@ height: 600px;
 /******* App *******/
 body{
     background-image: url("../images/bgrnd.jpg");
-    background-size: auto;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+p {
+    font-weight: 300;
+}
+.app-name{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+.instruct{
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+.display {
+    margin-left: 8%;
+}
+.left{
+    text-align: left;
+}
+/***** RESPONSIVE *****/
+@media only screen and (max-width: 768px) {
+    .display {
+        margin-left: 0%;
+    }
+  }

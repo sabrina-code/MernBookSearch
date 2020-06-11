@@ -4,15 +4,10 @@ import SearchBar from './SearchBar';
 import BookList from './BookList'
 import BookDetail from './BookDetail'
 
-
 const KEY = 'AIzaSyBYlDujBqXB32sgbb43_HCVYNHm7SC5qjk';
 
 class App extends React.Component {
     state = { books: [], selectedBook: null };
-
-    // componentDidMount() {
-    //     this.onSearchSubmit('flower');
-    // }
 
     onSearchSubmit = async term => {
         const response = await book.get('/volumes', {
@@ -26,7 +21,6 @@ class App extends React.Component {
     }
 
     onBookSelect = book => {
-        // console.log('From the App', book);
         this.setState({ selectedBook: book });
     };
 
@@ -34,12 +28,14 @@ class App extends React.Component {
         return (
             <div className="bg">
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                <BookDetail book={this.state.selectedBook} />
-                <BookList onBookSelect={this.onBookSelect} books={this.state.books} />
+                <p className="instruct">After search, click on the result to see detailed information. Scroll to view more.</p>
+                <div className="display">
+                    <BookDetail book={this.state.selectedBook} />
+                    <BookList onBookSelect={this.onBookSelect} books={this.state.books} />
+                </div>
             </div>
         );
     }
 }
 
 export default App;
-//ENABLE api

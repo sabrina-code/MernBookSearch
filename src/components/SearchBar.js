@@ -6,7 +6,6 @@ class SearchBar extends React.Component {
 
     onFormSubmit = event => {
         event.preventDefault();
-        // console.log(this.state.term);
         this.props.onSubmit(this.state.term); //passing down props.onSubmit from App
     };
 
@@ -14,8 +13,8 @@ class SearchBar extends React.Component {
         return (
             <div className="container col-md-6">
                 <form onSubmit={this.onFormSubmit} className="searchForm">
-                    <label>Book Search</label>
                     <div className="searcharea">
+                        <label className="app-name">Book Search</label>
                         <input
                             type="text"
                             value={this.state.term}
