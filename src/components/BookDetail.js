@@ -5,7 +5,7 @@ const BookDetail = ({ book }) => {
         return <div></div>
     }
     return (
-        <div className="bookdetail col-md-4 col-sm-12">
+        <div className="bookdetail col-md-4 col-sm-10">
             <h4>{book.volumeInfo.title}</h4>
             <p>{book.volumeInfo.description}</p>
             <p>Author: {book.volumeInfo.authors}</p>
@@ -16,7 +16,6 @@ const BookDetail = ({ book }) => {
                     book.volumeInfo.imageLinks === undefined ? "" : `${book.volumeInfo.imageLinks.thumbnail}`
                 }
             />
-
         </div>
     )
 };
