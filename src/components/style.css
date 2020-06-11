@@ -44,11 +44,12 @@ form button{
     font-size: 23px;
     padding: 5px 14px;
     width:100px;
+    font-weight: 300;
 }
 
 /******* BookList.js *******/
 .horizontal-list {
-    height: 500px;
+    height: 540px;
     padding-left: 0;
     list-style: none;
     overflow: scroll;
@@ -104,7 +105,7 @@ p.mt-auto {
     padding: 15px;
     display: inline-block;
     text-align: left;
-    height: 500px;
+    height: 540px;
     overflow: scroll;
     background: rgba(255,255,255,.9);    
     border: 1px solid rgb(127, 127, 127); 
@@ -122,13 +123,11 @@ p.mt-auto {
 
 /******* App *******/
 body{
-    background-color: #5d8baf;
-}
-.bg{
     background-image: url("../images/bgrnd.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Condensed', sans-serif;
+    background-color: black;
 }
 p {
     font-weight: 300;

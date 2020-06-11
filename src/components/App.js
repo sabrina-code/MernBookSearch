@@ -28,7 +28,7 @@ class App extends React.Component {
         return (
             <div className="bg">
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                <p className="instruct">After search, click on the result to see detailed information. Scroll to view more.</p>
+                <p className="instruct">Click on the result to for detailed information. Scroll to view more.</p>
                 <div className="display">
                     <BookDetail book={this.state.selectedBook} />
                     <BookList onBookSelect={this.onBookSelect} books={this.state.books} />
