@@ -1,10 +1,11 @@
 import React from 'react';
+import config from '../config.js'
 import book from '../api/book';
 import SearchBar from './SearchBar';
 import BookList from './BookList'
 import BookDetail from './BookDetail'
 
-const KEY = 'AIzaSyBYlDujBqXB32sgbb43_HCVYNHm7SC5qjk';
+const KEY = config.API_KEY;
 
 class App extends React.Component {
     state = { books: [], selectedBook: null };
