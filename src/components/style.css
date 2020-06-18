@@ -135,11 +135,11 @@ p {
 .app-name{
     text-align: center;
     font-size: 50px;
-    color: white;
+    color: black;
     font-family: 'Quicksand', sans-serif;
 }
 .instruct{
-    color: white;
+    color: black;
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
