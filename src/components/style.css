@@ -12,14 +12,12 @@ input {
 }
 .input:focus {
     outline: none !important;
-    border: 1px solid #363636 !important;
-    box-shadow: 0 0 10px ;
 }
 .searcharea input{
     line-height: 1;
     font-size: 23px;
     min-width: 210px;
-    padding: 5px 15px;
+    padding: 4px 15px;
     width:70%;
     background: rgba(255, 255, 255, 0.8);
 }
@@ -46,7 +44,10 @@ form button{
     width:100px;
     font-weight: 300;
 }
-
+button:focus,
+input:focus {
+    outline:none;
+  }
 /******* BookList.js *******/
 .horizontal-list {
     height: 540px;
@@ -67,7 +68,7 @@ img.thumb {
     height: 200px !important;
 }
 .card {
-    width: 160px;
+    width: 153px;
     height: 380px;
     float: left;
     display: block;
@@ -155,6 +156,11 @@ p {
 .app-name {
     text-align: center;
     font-size: 40px;
+}
+}
+@media only screen and (max-width: 576px) {
+.display {
+    margin:20px;
 }
 }
 @media only screen and (max-width: 480px) {
